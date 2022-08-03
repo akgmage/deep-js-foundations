@@ -1,4 +1,7 @@
-// typeof operator
+/* 
+    typeof operator : It is the only operator in existence that is able to reference
+    a thing that doesn't exist and not throw an error.
+*/
 var v;
 typeof v;
 // Output : 'undefined'
@@ -36,5 +39,5 @@ typeof v;
     undefined vs undeclared
     Undeclared : Its never been created in any scope that we have access to
     Undefined : There's definitely a variable and at the moment it has no value
-    
+
 */
