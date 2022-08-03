@@ -36,8 +36,8 @@ typeof v;
 // Output : 'bigint'
 
 /* 
-    undefined vs undeclared
+    Undefined vs undeclared vs uninitialized
     Undeclared : Its never been created in any scope that we have access to
     Undefined : There's definitely a variable and at the moment it has no value
-
+    Uninitialized: Variable can be in (TDZ) Temporal Dead Zone
 */
