@@ -56,3 +56,5 @@ myCatsAge;
 // Output : NaN
 myAge - "something";
 // Output : NaN
+myCatsAge === myCatsAge;
+// Output : false (because NaN's are not equal to each other as per IEEE)
