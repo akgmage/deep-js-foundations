@@ -58,3 +58,10 @@ myAge - "something";
 // Output : NaN
 myCatsAge === myCatsAge;
 // Output : false (because NaN's are not equal to each other as per IEEE)
+// Someway to determine if the value is in fact NaN, JS has a utility called isNaN
+isNaN(myAge);
+// Output : false
+isNaN(myCatsAge);
+// Output : true
+isNaN("something");
+// Output : true
