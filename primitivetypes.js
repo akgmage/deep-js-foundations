@@ -31,3 +31,10 @@ typeof v;
 var v = 42n;
 typeof v;
 // Output : 'bigint'
+
+/* 
+    undefined vs undeclared
+    Undeclared : Its never been created in any scope that we have access to
+    Undefined : There's definitely a variable and at the moment it has no value
+    
+*/
