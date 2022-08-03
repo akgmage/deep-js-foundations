@@ -28,3 +28,6 @@ typeof v;
 v = [1, 2, 3];
 typeof v;
 // Output : 'object'
+var v = 42n;
+typeof v;
+// Output : 'bigint'
