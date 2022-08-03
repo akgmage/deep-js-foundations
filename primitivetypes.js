@@ -41,3 +41,18 @@ typeof v;
     Undefined : There's definitely a variable and at the moment it has no value
     Uninitialized: Variable can be in (TDZ) Temporal Dead Zone
 */
+
+/*
+    NaN : Refer it to as an Invalid number
+*/
+var myAge = Number(0o46);
+myAge;
+// Output : 38
+var myNextAge = Number("39");
+myNextAge;
+// Output : 39
+var myCatsAge = Number("n/a");
+myCatsAge;
+// Output : NaN
+myAge - "something";
+// Output : NaN
