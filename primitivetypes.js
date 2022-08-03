@@ -65,3 +65,7 @@ isNaN(myCatsAge);
 // Output : true
 isNaN("something"); // coerce the string inside to a number before checking for them to be NaN
 // Output : true
+Number.isNaN(myCatsAge);
+// Output : true
+Number.isNaN("something");
+// Output : false
