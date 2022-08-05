@@ -84,3 +84,7 @@ trendRate < 0;
 // Output : false
 trendRate > 0;
 // Output : false
+Object.is(trebdRate, -0);
+// Output : true
+Object.is(trebdRate, 0);
+// Output : false
