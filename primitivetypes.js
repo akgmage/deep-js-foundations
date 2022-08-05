@@ -69,3 +69,12 @@ Number.isNaN(myCatsAge);
 // Output : true
 Number.isNaN("something");
 // Output : false
+
+/*
+    Special values: -0    
+*/
+var trendRate = -0;
+trendRate === -0;
+// Output : true
+trendRate.toString();
+// Output : '0'
