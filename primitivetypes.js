@@ -78,3 +78,9 @@ trendRate === -0;
 // Output : true
 trendRate.toString();
 // Output : '0'
+trendRate === 0;
+// Output : true
+trendRate < 0;
+// Output : false
+trendRate > 0;
+// Output : false
