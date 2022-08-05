@@ -84,6 +84,8 @@ trendRate < 0;
 // Output : false
 trendRate > 0;
 // Output : false
+
+// Built in checker to test for negative zero
 Object.is(trebdRate, -0);
 // Output : true
 Object.is(trebdRate, 0);
