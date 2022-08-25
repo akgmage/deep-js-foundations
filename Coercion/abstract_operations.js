@@ -19,10 +19,16 @@
  * 3.14159 "3.14159"
  * 0 "0"
  * -0 "0"
+ *
  * ToString (Array)
  * [] ""
  * [1,2,3] "1,2,3"
  * [null, undefined] ","
  * [[[],[],[]],[]] ",,,"
  * [....] "..."
+ *
+ * ToString (Object)
+ * {} "[object Object]"
+ * {a:2} "[object Object]"
+ * {toString(){return "X";}} "X"
  */
