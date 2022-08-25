@@ -4,7 +4,7 @@ function outest() {
     function inner() {
       console.log(a, b, c);
     }
-    //let a = 10;
+    let a = 10;
     return inner;
   }
   return outer;
@@ -37,3 +37,13 @@ counter1.decrementCounter();
 // over consumption of memory
 // closed over variables are not garbage collected
 // can elad to memory leaks if not handled properly
+
+function aa() {
+  var x = 0,
+    z = 10;
+  return function b() {
+    console.log(x);
+  };
+}
+var y = aa();
+y();
