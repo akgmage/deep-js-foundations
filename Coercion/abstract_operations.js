@@ -8,3 +8,15 @@
 // hint: "string"
 // toString()
 // valueOf()
+
+// ToString
+
+/**
+ * null "null"
+ * undefined "undefined"
+ * true "true"
+ * false "false"
+ * 3.14159 "3.14159"
+ * 0 "0"
+ * -0 "0"
+ */
