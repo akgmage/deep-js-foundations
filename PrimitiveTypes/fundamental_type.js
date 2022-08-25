@@ -7,3 +7,9 @@
  * RegExp()
  * Error()
  */
+/**
+ * Don't use new:
+ * String()
+ * Number()
+ * Boolean()
+ */
