@@ -32,3 +32,8 @@ var counter1 = new Counter();
 counter1.incrementCounter();
 counter1.incrementCounter();
 counter1.decrementCounter();
+
+// disadvantages
+// over consumption of memory
+// closed over variables are not garbage collected
+// can elad to memory leaks if not handled properly
