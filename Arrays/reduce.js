@@ -5,3 +5,14 @@ const sum = numbers.reduce(function (result, item) {
   return result + item;
 }, 0);
 console.log(sum);
+
+var pets = ["dogs", "cats", "dogs", "cats", "monkey", "cow", "chicken"];
+const petCounts = pets.reduce(function (obj, pet) {
+  if (!obj[pet]) {
+    obj[pet] = 1;
+  } else {
+    obj[pet]++;
+  }
+  return obj;
+}, {});
+console.log(petCounts);
