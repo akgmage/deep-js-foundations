@@ -6,6 +6,7 @@ const sum = numbers.reduce(function (result, item) {
 }, 0);
 console.log(sum);
 
+// Transform an array of strings into a single object that shows how many times each string appears in the array
 var pets = ["dogs", "cats", "dogs", "cats", "monkey", "cow", "chicken"];
 const petCounts = pets.reduce(function (obj, pet) {
   if (!obj[pet]) {
