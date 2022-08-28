@@ -20,6 +20,11 @@ const observable = new Observable((subscriber) => {
   }),
   map((value) => {
     console.log("2)got data from first operator", value);
+    return value.filter((user) => user.status === "active");
+  }),
+  map((value) => {
+    console.log("3) got data from second operator", value);
+    return value;
   })
 );
 // Consume the value provided / delivered by Observable
