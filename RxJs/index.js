@@ -5,7 +5,7 @@ const users = {
     { status: "active", age: 14 },
     { status: "active", age: 13 },
     { status: "inactive", age: 17 },
-    { status: "active", age: 19 },
+    { status: "active", age: 44 },
     { status: "inactive", age: 11 },
     { status: "inactive", age: 78 },
   ],
@@ -13,6 +13,7 @@ const users = {
 // Emit value of 10 from observable and send it to pipe
 const observable = new Observable((subscriber) => {
   subscriber.next(users);
+  subscriber.complete();
 }).pipe(
   map((value) => {
     console.log("1)inside of first operator", value);
