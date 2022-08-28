@@ -14,3 +14,4 @@ const observer = {
     console.log("Observer got a complete notification");
   },
 };
+observable.subscribe(observer);
