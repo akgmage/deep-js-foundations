@@ -5,7 +5,7 @@ const users = {
     { status: "active", age: 14 },
     { status: "active", age: 13 },
     { status: "inactive", age: 17 },
-    { status: "active", age: 32 },
+    { status: "active", age: 19 },
     { status: "inactive", age: 11 },
     { status: "inactive", age: 78 },
   ],
@@ -25,6 +25,11 @@ const observable = new Observable((subscriber) => {
   map((value) => {
     console.log("3) got data from second operator", value);
     return value.reduce((sum, user) => sum + user.age, 0) / value.length;
+  }),
+  map((value) => {
+    console.log("4) got data from third operator", value);
+    if (value < 18) throw new Error("Average is below 18");
+    else return value;
   })
 );
 // Consume the value provided / delivered by Observable
