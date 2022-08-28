@@ -24,7 +24,7 @@ const observable = new Observable((subscriber) => {
   }),
   map((value) => {
     console.log("3) got data from second operator", value);
-    return value;
+    return value.reduce((sum, user) => sum + user.age, 0) / value.length;
   })
 );
 // Consume the value provided / delivered by Observable
