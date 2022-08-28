@@ -1,3 +1,19 @@
+// Basic closure example
+function z() {
+  var b = 900;
+  function x() {
+    var a = 7;
+    function y() {
+      console.log(a, b);
+    }
+    return y;
+  }
+  return x;
+}
+//var z = z();
+console.log(z, z());
+z()()();
+
 function outest() {
   var c = 20;
   function outer(b) {
@@ -16,6 +32,8 @@ close();
 // advantages of closures
 // used in module patterns
 // data hiding and encapsulation
+// setTimeouts
+// memoize
 
 function Counter() {
   var count = 0;
