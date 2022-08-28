@@ -1,4 +1,5 @@
 const { Observable } = require("rxjs");
+const { map } = require("rxjs/operators");
 const users = {
   data: [
     { status: "active", age: 14 },
@@ -9,10 +10,18 @@ const users = {
     { status: "inactive", age: 78 },
   ],
 };
-// Emit value of 10 from observable
+// Emit value of 10 from observable and send it to pipe
 const observable = new Observable((subscriber) => {
-  subscriber.next(10);
-});
+  subscriber.next(users);
+}).pipe(
+  map((value) => {
+    console.log("1)inside of first operator", value);
+    return value.data;
+  }),
+  map((value) => {
+    console.log("2)got data from first operator", value);
+  })
+);
 // Consume the value provided / delivered by Observable
 const observer = {
   next: (value) => {
