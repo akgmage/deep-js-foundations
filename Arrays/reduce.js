@@ -40,8 +40,6 @@ const pilots = [
     years: 22,
   },
 ];
-const totalYears = pilots.reduce((value, pilot) => {
-  return value + pilot.years;
-}, 0);
+const totalYears = pilots.reduce((value, pilot) => value + pilot.years, 0);
 
 console.log(totalYears);
