@@ -51,3 +51,10 @@ const newArr = original.reduce((accumulator, value, index) => {
   return accumulator;
 }, []);
 console.log(newArr);
+
+const arr = ["z", "x", "c", "v", "b"];
+const obj = arr.reduce((accumulator, value) => {
+  accumulator[value] = true;
+  return accumulator;
+}, {});
+console.log(obj);
