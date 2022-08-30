@@ -43,3 +43,11 @@ const pilots = [
 const totalYears = pilots.reduce((value, pilot) => value + pilot.years, 0);
 
 console.log(totalYears);
+
+const original = [1, 2, 3, 4, 5];
+const newArr = original.reduce((accumulator, value, index) => {
+  console.log(accumulator, index, value);
+  accumulator[index] = value * 3;
+  return accumulator;
+}, []);
+console.log(newArr);
