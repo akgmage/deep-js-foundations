@@ -1,3 +1,5 @@
+const { elementAt } = require("rxjs");
+
 // The map() method is used for creating a new array from an existing one
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map((x) => x * 2);
@@ -12,3 +14,9 @@ const users = [
 ];
 const concatNames = users.map((item) => `${item.firstName} ${item.lastName}`);
 console.log(concatNames);
+
+const arr = [1, 2, 3, 4, 5];
+arr.map((item, index, array) => {
+  console.log(item, index, array);
+  return item;
+});
