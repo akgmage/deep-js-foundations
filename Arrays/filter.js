@@ -13,3 +13,14 @@ const students = [
 ];
 const studentGrades = students.filter((x) => x.grade > 83);
 console.log(studentGrades);
+
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+const wordsLessThan5 = words.filter((x) => x.length < 6);
+console.log(wordsLessThan5);
