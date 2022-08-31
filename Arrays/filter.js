@@ -24,3 +24,7 @@ const words = [
 ];
 const wordsLessThan5 = words.filter((x) => x.length < 6);
 console.log(wordsLessThan5);
+
+const nums = [-23, -20, -17, -12, -5, 0, 1, 5, 12, 19, 20];
+const negativeNums = nums.filter((x) => x < 0);
+console.log(negativeNums);
