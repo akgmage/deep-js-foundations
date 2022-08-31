@@ -28,3 +28,13 @@ console.log(wordsLessThan5);
 const nums = [-23, -20, -17, -12, -5, 0, 1, 5, 12, 19, 20];
 const negativeNums = nums.filter((x) => x < 0);
 console.log(negativeNums);
+
+const creatures = [
+  { name: "Shark", habitat: "Ocean" },
+  { name: "Whale", habitat: "Ocean" },
+  { name: "Lion", habitat: "Savanna" },
+  { name: "Monkey", habitat: "Jungle" },
+];
+
+const oceanCreatures = creatures.filter((x) => x.habitat === "Ocean");
+console.log(oceanCreatures);
