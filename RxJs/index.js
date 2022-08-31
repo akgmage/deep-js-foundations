@@ -12,6 +12,7 @@ const users = {
   ],
 };
 // Emit value of 10 from observable and send it to pipe
+// The following is an Observable that pushes the values users immediately (synchronously) when subscribed
 const observable = new Observable((subscriber) => {
   subscriber.next(users);
   subscriber.complete();
