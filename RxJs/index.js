@@ -47,4 +47,5 @@ const observer = {
     console.log("Observer got a complete notification");
   },
 };
+// A Subscription is an object that represents a disposable resource, usually the execution of an Observable
 observable.subscribe(observer);
