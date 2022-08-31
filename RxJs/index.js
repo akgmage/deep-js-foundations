@@ -33,6 +33,7 @@ const observable = new Observable((subscriber) => {
     else return value;
   })
 );
+// An Observer is a consumer of values delivered by an Observable
 // Consume the value provided / delivered by Observable
 const observer = {
   next: (value) => {
