@@ -1,3 +1,4 @@
+//An Observable is a lazily evaluated computation that can synchronously or asynchronously return zero to (potentially) infinite values from the time it's invoked onwards.
 const { Observable } = require("rxjs");
 const { map } = require("rxjs/operators");
 const users = {
