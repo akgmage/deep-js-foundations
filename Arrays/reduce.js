@@ -58,3 +58,27 @@ const obj = arr.reduce((accumulator, value) => {
   return accumulator;
 }, {});
 console.log(obj);
+
+let shoppingCart = [
+  {
+    product: "phone",
+    qty: 1,
+    price: 500,
+  },
+  {
+    product: "Screen Protector",
+    qty: 1,
+    price: 10,
+  },
+  {
+    product: "Memory Card",
+    qty: 2,
+    price: 20,
+  },
+];
+
+const totalPrice = shoppingCart.reduce(
+  (accumulator, value) => accumulator + value.qty * value.price,
+  0
+);
+console.log(totalPrice);
