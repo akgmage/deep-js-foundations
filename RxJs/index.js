@@ -1,3 +1,4 @@
+//An Observable is a lazily evaluated computation that can synchronously or asynchronously return zero to (potentially) infinite values from the time it's invoked onwards.
 const { Observable } = require("rxjs");
 const { map } = require("rxjs/operators");
 const users = {
@@ -33,6 +34,7 @@ const observable = new Observable((subscriber) => {
     else return value;
   })
 );
+// An Observer is a consumer of values delivered by an Observable
 // Consume the value provided / delivered by Observable
 const observer = {
   next: (value) => {
@@ -45,4 +47,5 @@ const observer = {
     console.log("Observer got a complete notification");
   },
 };
+// A Subscription is an object that represents a disposable resource, usually the execution of an Observable
 observable.subscribe(observer);
