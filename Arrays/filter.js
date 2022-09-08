@@ -65,3 +65,7 @@ const users = [
 const currentYear = new Date().getFullYear();
 const eligibleUsers = users.filter((user) => currentYear - user.birthYear > 25);
 console.log(eligibleUsers);
+
+// case sensitive search
+const result = users.filter((item) => item.name.includes("am"));
+console.log(result);
