@@ -36,6 +36,7 @@ const creatures = [
   { name: "Monkey", habitat: "Jungle" },
 ];
 
+// Filter users based on age
 const oceanCreatures = creatures.filter((x) => x.habitat === "Ocean");
 console.log(oceanCreatures);
 
@@ -64,3 +65,7 @@ const users = [
 const currentYear = new Date().getFullYear();
 const eligibleUsers = users.filter((user) => currentYear - user.birthYear > 25);
 console.log(eligibleUsers);
+
+// case sensitive search
+const result = users.filter((item) => item.name.includes("am"));
+console.log(result);
