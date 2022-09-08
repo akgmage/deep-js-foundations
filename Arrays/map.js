@@ -21,6 +21,7 @@ arr.map((item, index, array) => {
   return item;
 });
 
+// Re-format birthdays
 const bdays = ["12-12", "11-11", "01-01", "02-02"];
 const newBdays = bdays.map((item) => item.replace("-", "/"));
 console.log(newBdays);
