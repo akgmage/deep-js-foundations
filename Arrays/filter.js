@@ -36,6 +36,7 @@ const creatures = [
   { name: "Monkey", habitat: "Jungle" },
 ];
 
+// Filter users based on age
 const oceanCreatures = creatures.filter((x) => x.habitat === "Ocean");
 console.log(oceanCreatures);
 
