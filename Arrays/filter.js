@@ -38,3 +38,29 @@ const creatures = [
 
 const oceanCreatures = creatures.filter((x) => x.habitat === "Ocean");
 console.log(oceanCreatures);
+
+const users = [
+  {
+    name: "Joram Yam",
+    city: "India",
+    birthYear: 1997,
+  },
+  {
+    name: "Sonali Gupta",
+    city: "INdia",
+    birthYear: 1998,
+  },
+  {
+    name: "Abhisek Kumar",
+    city: "India",
+    birthYear: 1900,
+  },
+  {
+    name: "Abhisek",
+    city: "India",
+    birthYear: 1980,
+  },
+];
+const currentYear = new Date().getFullYear();
+const eligibleUsers = users.filter((user) => currentYear - user.birthYear > 25);
+console.log(eligibleUsers);
