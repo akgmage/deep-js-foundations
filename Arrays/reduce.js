@@ -82,3 +82,33 @@ const totalPrice = shoppingCart.reduce(
   0
 );
 console.log(totalPrice);
+
+// calculate total for items
+const items = [
+  { description: "Potato", quantity: 1, price: 3, total: 34 },
+  { description: "Tomato", quantity: 0.5, price: 5, total: 222 },
+  { description: "Onion", quantity: 2, price: 6, total: 43 },
+];
+
+const total = items.reduce((acc, item) => item.total + acc, 0);
+console.log(total);
+
+// grouping of objects
+const characters = [
+  { name: "Dan", age: 40 },
+  { name: "Ban", age: 40 },
+  { name: "Can", age: 30 },
+  { name: "Fan", age: 30 },
+  { name: "Lan", age: 30 },
+];
+const group = characters.reduce((acc, item) => {
+  if (acc[item.age]) ++acc[item.age];
+  else acc[item.age] = 1;
+  return acc;
+}, {});
+console.log(group);
+
+// Find max value in array
+const maxArr = [1, 2, 3, 4, 5, 6, 7, 8];
+const maxVal = maxArr.reduce((a, i) => Math.max(a, i), -Infinity);
+console.log(maxVal);
