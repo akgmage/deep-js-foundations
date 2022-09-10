@@ -92,3 +92,18 @@ const items = [
 
 const total = items.reduce((acc, item) => item.total + acc, 0);
 console.log(total);
+
+// grouping of objects
+const characters = [
+  { name: "Dan", age: 40 },
+  { name: "Ban", age: 40 },
+  { name: "Can", age: 30 },
+  { name: "Fan", age: 30 },
+  { name: "Lan", age: 30 },
+];
+const group = characters.reduce((acc, item) => {
+  if (acc[item.age]) ++acc[item.age];
+  else acc[item.age] = 1;
+  return acc;
+}, {});
+console.log(group);
