@@ -107,3 +107,8 @@ const group = characters.reduce((acc, item) => {
   return acc;
 }, {});
 console.log(group);
+
+// Find max value in array
+const maxArr = [1, 2, 3, 4, 5, 6, 7, 8];
+const maxVal = maxArr.reduce((a, i) => Math.max(a, i), -Infinity);
+console.log(maxVal);
