@@ -82,3 +82,13 @@ const totalPrice = shoppingCart.reduce(
   0
 );
 console.log(totalPrice);
+
+// calculate total for items
+const items = [
+  { description: "Potato", quantity: 1, price: 3, total: 34 },
+  { description: "Tomato", quantity: 0.5, price: 5, total: 222 },
+  { description: "Onion", quantity: 2, price: 6, total: 43 },
+];
+
+const total = items.reduce((acc, item) => item.total + acc, 0);
+console.log(total);
