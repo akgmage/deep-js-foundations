@@ -1,12 +1,16 @@
 const { Observable } = require("rxjs");
 
 const observable = new Observable((subscriber) => {
-  // stream of data
-  subscriber.next("Hello World");
-  subscriber.next("Hello World 2");
-  subscriber.error("Error"); // terminate an observable
-  subscriber.complete(); // prevent observable from pushing new data
+  const id = setInterval(() => {
+    subscriber.next("test");
+    console.log("leak");
+  }, 1000);
+  subscriber.complete();
+  return () => {
+    clearInterval(id);
+  };
 });
+console.log("before");
 observable.subscribe({
   next: (value) => {
     console.log(value);
@@ -16,3 +20,4 @@ observable.subscribe({
   },
   complete: () => console.log("Completed"),
 });
+console.log("after");
