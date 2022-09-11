@@ -11,7 +11,7 @@ const observable = new Observable((subscriber) => {
     clearInterval(id);
   };
 });
-console.log("before");
+
 const subscription = observable.subscribe({
   next: (value) => {
     console.log(value);
@@ -25,4 +25,3 @@ const subscription = observable.subscribe({
 setTimeout(() => {
   subscription.unsubscribe();
 }, 4000);
-console.log("after");
