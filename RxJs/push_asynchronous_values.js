@@ -21,7 +21,7 @@ const subscription = observable.subscribe({
   },
   complete: () => console.log("Completed"),
 });
-
+// unsubscribe to subscription object after 4 seconds
 setTimeout(() => {
   subscription.unsubscribe();
 }, 4000);
