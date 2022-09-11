@@ -6,14 +6,13 @@ const observable = new Observable((subscriber) => {
     subscriber.next("test");
     console.log("leak");
   }, 1000);
-  subscriber.complete();
   // clear interval to prevent memory leak
   return () => {
     clearInterval(id);
   };
 });
 console.log("before");
-observable.subscribe({
+const subscription = observable.subscribe({
   next: (value) => {
     console.log(value);
   },
@@ -22,4 +21,8 @@ observable.subscribe({
   },
   complete: () => console.log("Completed"),
 });
+
+setTimeout(() => {
+  subscription.unsubscribe();
+}, 4000);
 console.log("after");
