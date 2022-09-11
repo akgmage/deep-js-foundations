@@ -3,6 +3,7 @@ const { Observable } = require("rxjs");
 const observable = new Observable((subscriber) => {
   subscriber.next("Hello World");
   subscriber.next("Hello World 2");
+  subscriber.error("Error"); // terminate an observable
   subscriber.complete();
 });
 observable.subscribe({
