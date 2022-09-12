@@ -1,6 +1,7 @@
 const { interval } = require("rxjs");
 const { reduce, take } = require("rxjs/operators");
 
+//Emit numbers in sequence based on provided timeframe
 const observable = interval(500).pipe(
   //Emit provided number of values before completing.
   take(10),
