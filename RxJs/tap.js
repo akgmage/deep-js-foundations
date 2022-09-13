@@ -1,10 +1,11 @@
 const { interval } = require("rxjs");
 const { reduce, take, tap } = require("rxjs/operators");
 
-//Emit numbers in sequence based on provided timeframe
+// Emit numbers in sequence based on provided timeframe
 const observable = interval(500).pipe(
-  //Emit provided number of values before completing.
+  // Emit provided number of values before completing.
   take(10),
+  // Transparently perform actions or side-effects, such as logging.
   tap(),
   reduce((acc, item) => acc + item, 0)
 );
