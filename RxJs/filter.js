@@ -1,18 +1,8 @@
 const { of, from, fromEvent } = require("rxjs");
 const { map, pluck, filter } = require("rxjs/operators");
 
-const observable = fromEvent(document, "keydown").pipe(
-  pluck("code"),
-  filter((code) => code === "Space")
-);
-
-const subscription = observable.subscribe({
-  next(value) {
-    console.log(value);
-  },
-  complete() {
-    console.log("completed");
-  },
-});
-
-console.log("hello");
+//emit (3, 6, 8, 9, 12, 55, 57)
+const source = from([3, 6, 8, 9, 12, 55, 57]);
+//filter out even numbers
+const example = source.pipe(filter((num) => num & 1));
+const subscribe = example.subscribe((val) => console.log(`Odd number: ${val}`));
