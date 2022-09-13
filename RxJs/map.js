@@ -1,4 +1,4 @@
-const { of } = require("rxjs");
+const { of, from } = require("rxjs");
 const { map } = require("rxjs/operators");
 
 // Apply projection with each value from source
@@ -14,3 +14,13 @@ const subscription = observable.subscribe({
 });
 
 console.log("hello");
+
+const dataSource = from([
+  { name: "Abhi", age: 20 },
+  { name: "John", age: 10 },
+  { name: "Dev", age: 45 },
+  { name: "Cya", age: 44 },
+]);
+// grab each persons name
+const example = dataSource.pipe(map(({ name }) => name));
+const subscribe = example.subscribe((val) => console.log(val));
