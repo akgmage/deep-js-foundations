@@ -6,7 +6,7 @@ const observable = interval(500).pipe(
   // Emit provided number of values before completing.
   take(10),
   // Transparently perform actions or side-effects, such as logging.
-  tap(),
+  tap(console.log),
   reduce((acc, item) => acc + item, 0)
 );
 
